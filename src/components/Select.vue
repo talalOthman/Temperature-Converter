@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
     <div class="form-control w-full max-w-xs">
         <label class="label">

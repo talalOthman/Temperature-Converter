@@ -57,7 +57,7 @@ export const store = reactive({
     this.sign = 'C'
   },
   celsiusToKelvin() {
-    this.result = Number(this.degree + 273.15).toFixed(2)
+    this.result = Number(((this.degree + 273.15))).toFixed(2)
     this.sign = 'K'
   },
   kelvinToCelsius() {

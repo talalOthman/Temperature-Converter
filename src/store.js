@@ -13,34 +13,12 @@ export const store = reactive({
           case 'Fahrenheit':
             this.celsiusToFahrenheit()
             break
-          case 'Kelvin':
-            this.celsiusToKelvin()
-            break
-          default:
-            break
         }
         break
       case 'Fahrenheit':
         switch (this.convertToType) {
           case 'Celsius':
             this.fahrenheitToCelsius()
-            break
-          case 'Kelvin':
-            this.fahrenheitToKelvin()
-            break
-          default:
-            break
-        }
-        break
-      case 'Kelvin':
-        switch (this.convertToType) {
-          case 'Celsius':
-            this.kelvinToCelsius()
-            break
-          case 'Fahrenheit':
-            this.kelvinToFahrenheit()
-            break
-          default:
             break
         }
         break
@@ -55,22 +33,6 @@ export const store = reactive({
   fahrenheitToCelsius() {
     this.result = Number(((this.degree - 32) * 5) / 9).toFixed(2)
     this.sign = 'C'
-  },
-  celsiusToKelvin() {
-    this.result = Number(((this.degree + 273.15))).toFixed(2)
-    this.sign = 'K'
-  },
-  kelvinToCelsius() {
-    this.result = Number(this.degree - 273.15).toFixed(2)
-    this.sign = 'C'
-  },
-  fahrenheitToKelvin() {
-    this.result = Number(((this.degree - 32) * 5) / 9 + 273.15).toFixed(2)
-    this.sign = 'K'
-  },
-  kelvinToFahrenheit() {
-    this.result = Number(((this.degree - 273.15) * 9) / 5 + 32).toFixed(2)
-    this.sign = 'F'
   },
 
   degree: null

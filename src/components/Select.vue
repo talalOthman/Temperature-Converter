@@ -19,12 +19,10 @@ defineProps(['convertTo'])
     >
       <option>Celsius</option>
       <option>Fahrenheit</option>
-      <option>Kelvin</option>
     </select>
     <select v-else class="select select-bordered select-primary" v-model="store.actualType">
       <option>Celsius</option>
       <option>Fahrenheit</option>
-      <option>Kelvin</option>
     </select>
   </div>
 </template>

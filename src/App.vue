@@ -6,11 +6,8 @@ import { store } from './store'
 </script>
 
 <template>
-  <div class="h-screen flex flex-col justify-center items-center p-5 gap-y-5 md:gap-y-10" style="@supports (-webkit-touch-callout: none) {
-    .h-screen {
-      height: -webkit-fill-available;
-    }
-  }">
+  <div class="absolute inset-0">
+  <div class="h-screen flex flex-col justify-center items-center p-5 gap-y-5 md:gap-y-10">
     <div class="flex flex-col justify-center items-center gap-y-2">
       <div class="flex flex-col items-center md:flex-row md:gap-x-3">
         <h1 class="text-4xl md:text-7xl font-bold">Temperature</h1>
@@ -30,6 +27,7 @@ import { store } from './store'
       <button @click="store.convert" class="btn btn-primary">Convert</button>
       <Result />
     </div>
+  </div>
   </div>
 </template>
 

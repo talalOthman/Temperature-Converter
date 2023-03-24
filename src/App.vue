@@ -2,6 +2,7 @@
 import Select from './components/Select.vue'
 import Text from './components/Text.vue'
 import Result from './components/Result.vue'
+import { store } from './store'
 </script>
 
 <template>
@@ -13,14 +14,18 @@ import Result from './components/Result.vue'
       </div>
       <p class="text-xs md:text-lg">Convert temperature from one scale to another</p>
     </div>
-    <div class="border border-primary w-3/4 flex flex-col p-7 gap-y-8 rounded-lg shadow-primary shadow-md">
-      <div class="flex flex-col md:flex-row justify-center items-center gap-y-3 md:gap-x-3">
+    <div
+      class="border border-primary w-4/4 md:w-3/4 flex flex-col p-7 gap-y-8 rounded-lg shadow-primary shadow-md items-center"
+    >
+      <div class="flex justify-center items-center gap-x-3">
         <Text />
-        <Select />
-        <button class="btn btn-primary mt-2 md:mt-9">Convert</button>
+        <Select :type="store.firstType" />
       </div>
+      <div class="flex w-full justify-center">
+        <Select :type="store.secondType" :convertTo="true" class="w-60" />
+      </div>
+      <button @click="store.convert" class="btn btn-primary">Convert</button>
       <Result />
     </div>
   </div>
 </template>
-

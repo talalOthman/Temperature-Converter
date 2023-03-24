@@ -1,14 +1,24 @@
-# temperature-converter
+# Temperature Converter
 
-This template should help get you started developing with Vue 3 in Vite.
+The Temperature Converter is a web application developed using the Vue.js framework, designed to allow users to convert temperature values from one scale to another. The application utilizes a global reactive store, to manage the state of the application and handle the conversion logic. Apart from thta, this application was built with simplicity, speed, and ease-of-use in mind, making it ideal for users of all skill levels.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Usage
 
-## Customize configuration
+1. Select the temperature scale you want to convert from using the dropdown menu.
+2. Enter the temperature value in the input field.
+3. Select the temperature scale you want to convert to using the second dropdown menu.
+4. Click the "Convert" button to convert the temperature value.
+5. The converted temperature value will be displayed in the output field.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Accessing the Project
+
+The project is currently deployed and can be accessed at the following link: https://temperature-converter-brown.vercel.app/
+
+## Technologies Used
+1. Vue.js
+2. DaisyUI
+3. Tailwind CSS
 
 ## Project Setup
 
@@ -26,16 +36,4 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
